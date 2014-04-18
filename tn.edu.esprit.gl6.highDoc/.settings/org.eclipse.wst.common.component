@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="tn.edu.esprit.gl6.highDoc">
+        <wb-resource deploy-path="/" source-path="/EarContent" tag="defaultRootSource"/>
+        <dependent-module archiveName="tn.edu.esprit.gl6.highDocEJB.jar" deploy-path="/" handle="module:/resource/tn.edu.esprit.gl6.highDocEJB/tn.edu.esprit.gl6.highDocEJB">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="tn.edu.esprit.gl6.highDocWeb.war" deploy-path="/" handle="module:/resource/tn.edu.esprit.gl6.highDocWeb/tn.edu.esprit.gl6.highDocWeb">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>
