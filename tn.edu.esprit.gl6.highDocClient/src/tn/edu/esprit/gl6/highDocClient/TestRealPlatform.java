@@ -79,4 +79,9 @@ public class TestRealPlatform {
 
 	}
 
+	@Test
+	public void itShouldFindAllPatients() {
+		Assert.assertEquals(2, userServicesRemote.findAllPatients().size());
+	}
+
 }

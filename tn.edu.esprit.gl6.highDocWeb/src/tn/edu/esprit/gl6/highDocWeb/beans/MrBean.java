@@ -31,7 +31,7 @@ public class MrBean implements Serializable {
 				return "doc.jsf?send-redirect=true";
 			}
 			if (userFound instanceof Nurse) {
-				return "nurse.jsf";
+				return "pages/patients/patientsManagement";
 			}
 			if (userFound instanceof Patient) {
 				return "patient.jsf";

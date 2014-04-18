@@ -1,9 +1,12 @@
 package tn.edu.esprit.gl6.highDocEJB.services.impl;
 
+import java.util.List;
+
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+import tn.edu.esprit.gl6.highDocEJB.domain.Patient;
 import tn.edu.esprit.gl6.highDocEJB.domain.User;
 import tn.edu.esprit.gl6.highDocEJB.services.interfaces.UserServicesLocal;
 import tn.edu.esprit.gl6.highDocEJB.services.interfaces.UserServicesRemote;
@@ -64,6 +67,12 @@ public class UserServices implements UserServicesRemote, UserServicesLocal {
 	@Override
 	public User findUserById(int id) {
 		return entityManager.find(User.class, id);
+	}
+
+	@Override
+	public List<Patient> findAllPatients() {
+		return entityManager.createQuery("select p from Patient p")
+				.getResultList();
 	}
 
 }

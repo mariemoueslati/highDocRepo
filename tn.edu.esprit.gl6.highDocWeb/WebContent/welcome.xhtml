@@ -14,8 +14,8 @@
 			<h:panelGrid columns="2">
 				<h:outputLabel value="login" />
 				<h:inputText value="#{mrBean.user.login}" />
-				<h:outputLabel value="password" />
-				<h:inputText value="#{mrBean.user.password}" />
+				<h:outputLabel  value="password" />
+				<h:inputSecret value="#{mrBean.user.password}" />
 				<h:commandButton action="#{mrBean.doLogin()}" value="ok" />
 			</h:panelGrid>
 		</h:form>
