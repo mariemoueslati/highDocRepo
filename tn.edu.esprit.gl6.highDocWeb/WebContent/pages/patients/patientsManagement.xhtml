@@ -9,7 +9,7 @@
 </h:head>
 <body>
 	<h:form>
-		<h:dataTable border="1" value="#{userManagementBean.patients}" var="p">
+		<h:dataTable border="1" value="#{userManagementBean.dataModel}" var="p">
 			<h:column id="column1">
 				<f:facet name="header">
 					<h:outputText value="Patient's Name"></h:outputText>
@@ -21,6 +21,12 @@
 					<h:outputText value="Folder reference"></h:outputText>
 				</f:facet>
 				<h:outputText value="#{p.folderRef}" />
+			</h:column>
+			<h:column id="column3">
+				<f:facet name="header">
+					<h:outputText value="#"></h:outputText>
+				</f:facet>
+				 <h:commandButton action="#{userManagementBean.selectPatient()}" value="Select" />
 			</h:column>
 
 		</h:dataTable>
@@ -37,7 +43,11 @@
 			<h:outputText value="folder reference" />
 			<h:inputText value="#{userManagementBean.patient.folderRef}" />
 			<h:commandButton action="#{userManagementBean.doAddPatient()}"
-				value="add" />
+				value="Add" />
+			<h:commandButton action="#{userManagementBean.doDeletePatient()}"
+				value="Delete" />
+				<h:commandButton action="#{userManagementBean.doUpdatePatient()}"
+				value="Update" />
 
 
 		</h:panelGrid>
