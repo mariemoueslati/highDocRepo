@@ -28,10 +28,10 @@ public class MrBean implements Serializable {
 		if (userFound != null) {
 			user = userFound;
 			if (userFound instanceof Doctor) {
-				return "doc.jsf?send-redirect=true";
+				return "doc.jsf?faces-redirect=true";
 			}
 			if (userFound instanceof Nurse) {
-				return "pages/patients/patientsManagement";
+				return "pages/patients/patientsManagement?faces-redirect=true";
 			}
 			if (userFound instanceof Patient) {
 				return "patient.jsf";

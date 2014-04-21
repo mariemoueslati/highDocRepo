@@ -40,7 +40,7 @@ public class TestRealPlatform {
 	}
 
 	@Test
-	@Ignore
+	
 	public void testLogin() {
 		User userFound = loginServicesRemote.login("a", "a");
 		Assert.assertEquals("meriem", userFound.getName());

@@ -22,6 +22,7 @@ public class UserManagementBean implements Serializable {
 	// models
 	private Patient patient = new Patient();
 	private List<Patient> patients;
+	private boolean listeOfPatientsVisibility = false;
 
 	// Injection of the proxy
 	@EJB
@@ -31,6 +32,12 @@ public class UserManagementBean implements Serializable {
 
 	public String doAddPatient() {
 		userServicesLocal.addUser(patient);
+		patient=new Patient();
+		return "";
+	}
+
+	public String enableVisibility() {
+		listeOfPatientsVisibility = true;
 		return "";
 	}
 
@@ -49,6 +56,14 @@ public class UserManagementBean implements Serializable {
 
 	public void setPatients(List<Patient> patients) {
 		this.patients = patients;
+	}
+
+	public boolean isListeOfPatientsVisibility() {
+		return listeOfPatientsVisibility;
+	}
+
+	public void setListeOfPatientsVisibility(boolean listeOfPatientsVisibility) {
+		this.listeOfPatientsVisibility = listeOfPatientsVisibility;
 	}
 
 }

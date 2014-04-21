@@ -22,8 +22,12 @@
 				</f:facet>
 				<h:outputText value="#{p.folderRef}" />
 			</h:column>
+
 		</h:dataTable>
-		<h:panelGrid columns="2">
+		<h:commandButton action="#{userManagementBean.enableVisibility()}"
+			value="Add Patient" />
+		<h:panelGrid columns="2"
+			rendered="#{userManagementBean.listeOfPatientsVisibility}">
 			<h:outputText value="name of the patient" />
 			<h:inputText value="#{userManagementBean.patient.name}" />
 			<h:outputText value="login" />
